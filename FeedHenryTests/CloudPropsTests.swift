@@ -61,7 +61,8 @@ class CloudPropsTest: XCTestCase {
         XCTAssertEqual(cloudProps?.cloudHost, "https://myDomain-fxpfgc8zld4erdytbixl3jlh-dev.df.dev.e111.feedhenry.net/")
         XCTAssertEqual(cloudProps?.env, "ENV")
         XCTAssertTrue(cloudProps?.cloudProps.count == 6)
-        XCTAssertTrue(cloudProps?.trackId == "eVtZFmW5NAbyEIJ8aecE2jJJ", "TrackId stored in NSUserDefaults.")
+        let track = cloudProps?.initProps!["trackId"] as! String
+        XCTAssertTrue(track == "eVtZFmW5NAbyEIJ8aecE2jJJ", "TrackId stored in NSUserDefaults.")
     }
     
     func testSucceedInitWithMockedStorage() {
@@ -69,8 +70,8 @@ class CloudPropsTest: XCTestCase {
             override class func standardUserDefaults() -> NSUserDefaults {
                 return NSUserDefaultsMock()
             }
-            override func stringForKey(defaultName: String) -> String? {
-                return "TRACK"
+            override func objectForKey(defaultName: String) -> AnyObject? {
+                return ["trackId":"TRACK"]
             }
             
             override func setObject(value: AnyObject?, forKey defaultName: String) {
@@ -82,7 +83,8 @@ class CloudPropsTest: XCTestCase {
         XCTAssertEqual(cloudProps?.cloudHost, "https://myDomain-fxpfgc8zld4erdytbixl3jlh-dev.df.dev.e111.feedhenry.net/")
         XCTAssertEqual(cloudProps?.env, "ENV")
         XCTAssertTrue(cloudProps?.cloudProps.count == 6)
-        XCTAssertTrue(cloudProps?.trackId == "TRACK", "TrackId stored in NSUserDefaults.")
+        let track = cloudProps?.initProps!["trackId"] as! String
+        XCTAssertTrue(track == "TRACK", "TrackId stored in NSUserDefaults.")
     }
 
     

@@ -132,7 +132,7 @@ class InitRequestTests: XCTestCase {
         let config = Config(propertiesFile: "fhconfig", bundle: NSBundle(forClass: self.dynamicType))
         let initRequest = InitRequest(config: config)
         XCTAssertEqual(initRequest.method, HTTPMethod.POST)
-        XCTAssertTrue(initRequest.args!.count == 7)
+        XCTAssertTrue(initRequest.args!.count == 8)
         XCTAssertNil(initRequest.headers)
     }
 

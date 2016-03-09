@@ -21,8 +21,9 @@ public class Config {
     var properties: [String: String]
     let propertiesFile: String
     var bundle: NSBundle
+    let dataManager: NSUserDefaults
     
-    init(propertiesFile: String = "fhconfig", bundle:NSBundle) {
+    init(propertiesFile: String = "fhconfig", bundle:NSBundle, storage: NSUserDefaults = NSUserDefaults.standardUserDefaults()) {
         self.propertiesFile = propertiesFile
         self.bundle = bundle
         let pathBundle = bundle.pathForResource(propertiesFile, ofType: "plist")
@@ -32,7 +33,18 @@ public class Config {
         } else {
             self.properties = [:]
         }
+        dataManager = storage
     }
+    
+    var initProps: [String: AnyObject]? {
+        get {
+            return dataManager.objectForKey("init") as? [String: AnyObject]
+        }
+        set {
+            dataManager.setObject(newValue, forKey: "init")
+        }
+    }
+
     
     public convenience init(propertiesFile: String = "fhconfig") {
         self.init(propertiesFile: propertiesFile, bundle: NSBundle.mainBundle())
@@ -69,6 +81,9 @@ public class Config {
         params["cuidMap"] = cuidArray
 
         // Read "FH_INIT stored param for other request than init
+        if let initProps = initProps {
+            params["init"] = initProps
+        }
         // Read read:SESSION_TOKEN_KEY
         return params
     }

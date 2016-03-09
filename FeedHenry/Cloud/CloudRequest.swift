@@ -36,7 +36,7 @@ public class CloudRequest: Request {
         self.method = method
         self.props = props
     }
-    
+    //TODO Add default Headers value
     public func exec(completionHandler: CompletionBlock) -> Void {
         let host = props.cloudHost
         request(method, host: host, path: path, args: args, completionHandler: completionHandler)

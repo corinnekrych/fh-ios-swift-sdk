@@ -36,10 +36,9 @@ public struct CloudProps {
     /// Computed propertie retrieved from ```setup``` cloud init call. 
     /// It represents the Id of the handshake between client/cloud app.
     /// The trackId is stored in local storage.
-    // TODO? replace by DataManager
-    public var trackId: String? {
+    public var initProps: [String: AnyObject]? {
         get {
-            return dataManager.stringForKey("init")
+            return dataManager.objectForKey("init") as? [String: AnyObject]
         }
         set {
             dataManager.setObject(newValue, forKey: "init")
@@ -52,11 +51,11 @@ public struct CloudProps {
     /// - Param dataManager: Identifies where to store the trackId returned by the cloud app. This parameter is used for dependency injection for unit testing. Its default value is NSUserDefaults storage.
     public init?(props: [String: AnyObject], storage: NSUserDefaults = NSUserDefaults.standardUserDefaults()) {
         guard let host = props["hosts"], url = host["url"] as? String else {return nil}
-        guard let initProp = props["init"], let track = initProp["trackId"] as? String else {return nil}
+        guard let initProps = props["init"] else {return nil}
         env = host["environment"] as? String
         cloudHost = url.hasSuffix("/") ? url : "\(url)/"
         cloudProps = props
         dataManager = storage
-        trackId = track
+        self.initProps = initProps as? [String: AnyObject]
     }
 }
