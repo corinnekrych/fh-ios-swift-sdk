@@ -50,8 +50,8 @@
 		48A857601C69271300EC00D4 /* fhconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48A8575F1C69271300EC00D4 /* fhconfig.plist */; };
 		48A857621C69296A00EC00D4 /* FH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A857611C69296A00EC00D4 /* FH.swift */; };
 		48F49A6F1CA0410600B7C544 /* PushConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F49A6E1CA0410600B7C544 /* PushConfig.swift */; };
-		99BF08CAFCD06D759104BDD7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E139FE8EB3B6F4E70E5433A6 /* Pods.framework */; };
 		BE9E91ECB1DC8C91D96E9155 /* Pods_FeedHenryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5058C5A4C0CE9C1DE925EAB6 /* Pods_FeedHenryTests.framework */; };
+		C63CFDF1A37B45AAADFAC1D5 /* Pods_FeedHenry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4125FF72BF8C5DF983FE0759 /* Pods_FeedHenry.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		2CCDEB4630586564531FFBB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4125FF72BF8C5DF983FE0759 /* Pods_FeedHenry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedHenry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482632C11C901F69008FEB4A /* FeedHenryTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedHenryTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		482632C21C901F6A008FEB4A /* FHSyncClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHSyncClientTest.m; path = Sync/FHSyncClientTest.m; sourceTree = "<group>"; };
 		482632C31C901F6A008FEB4A /* FHSyncDataRecordTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHSyncDataRecordTest.m; path = Sync/FHSyncDataRecordTest.m; sourceTree = "<group>"; };
@@ -117,6 +118,8 @@
 		48F1A9E71C98A120004E7B50 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		48F49A6E1CA0410600B7C544 /* PushConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushConfig.swift; sourceTree = "<group>"; };
 		5058C5A4C0CE9C1DE925EAB6 /* Pods_FeedHenryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedHenryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CEAE1F920C5D32784FC2791 /* Pods-FeedHenry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedHenry.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedHenry/Pods-FeedHenry.release.xcconfig"; sourceTree = "<group>"; };
+		80C9929116C2E9D1F79702EF /* Pods-FeedHenry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedHenry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedHenry/Pods-FeedHenry.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0BCE690717E5D4E64FCE9A /* Pods-FeedHenryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedHenryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedHenryTests/Pods-FeedHenryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C51772EB394474A944897FA6 /* Pods-FeedHenryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedHenryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedHenryTests/Pods-FeedHenryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E139FE8EB3B6F4E70E5433A6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99BF08CAFCD06D759104BDD7 /* Pods.framework in Frameworks */,
+				C63CFDF1A37B45AAADFAC1D5 /* Pods_FeedHenry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +300,8 @@
 				2CCDEB4630586564531FFBB5 /* Pods.release.xcconfig */,
 				BC0BCE690717E5D4E64FCE9A /* Pods-FeedHenryTests.debug.xcconfig */,
 				C51772EB394474A944897FA6 /* Pods-FeedHenryTests.release.xcconfig */,
+				80C9929116C2E9D1F79702EF /* Pods-FeedHenry.debug.xcconfig */,
+				7CEAE1F920C5D32784FC2791 /* Pods-FeedHenry.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			children = (
 				E139FE8EB3B6F4E70E5433A6 /* Pods.framework */,
 				5058C5A4C0CE9C1DE925EAB6 /* Pods_FeedHenryTests.framework */,
+				4125FF72BF8C5DF983FE0759 /* Pods_FeedHenry.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,12 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4878D5EE1B579965004518C4 /* Build configuration list for PBXNativeTarget "FeedHenry" */;
 			buildPhases = (
-				2FC963718BD852CE68EC88A4 /* Check Pods Manifest.lock */,
+				2FC963718BD852CE68EC88A4 /* [CP] Check Pods Manifest.lock */,
 				4878D5D51B579965004518C4 /* Sources */,
 				4878D5D61B579965004518C4 /* Frameworks */,
 				4878D5D71B579965004518C4 /* Headers */,
 				4878D5D81B579965004518C4 /* Resources */,
-				EF69C127F977187071DAAB75 /* Copy Pods Resources */,
+				EF69C127F977187071DAAB75 /* [CP] Copy Pods Resources */,
 				48F1A9EB1C98B3FC004E7B50 /* ShellScript */,
 			);
 			buildRules = (
@@ -359,12 +365,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4878D5F11B579965004518C4 /* Build configuration list for PBXNativeTarget "FeedHenryTests" */;
 			buildPhases = (
-				F5A5508682DC17207EA91C02 /* Check Pods Manifest.lock */,
+				F5A5508682DC17207EA91C02 /* [CP] Check Pods Manifest.lock */,
 				4878D5E01B579965004518C4 /* Sources */,
 				4878D5E11B579965004518C4 /* Frameworks */,
 				4878D5E21B579965004518C4 /* Resources */,
-				43FC41A72DCCE30C2C396D96 /* Embed Pods Frameworks */,
-				1AFBC7B9CAE3C4529A28D10D /* Copy Pods Resources */,
+				43FC41A72DCCE30C2C396D96 /* [CP] Embed Pods Frameworks */,
+				1AFBC7B9CAE3C4529A28D10D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -431,14 +437,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AFBC7B9CAE3C4529A28D10D /* Copy Pods Resources */ = {
+		1AFBC7B9CAE3C4529A28D10D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +452,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedHenryTests/Pods-FeedHenryTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FC963718BD852CE68EC88A4 /* Check Pods Manifest.lock */ = {
+		2FC963718BD852CE68EC88A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,14 +467,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		43FC41A72DCCE30C2C396D96 /* Embed Pods Frameworks */ = {
+		43FC41A72DCCE30C2C396D96 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,29 +495,29 @@
 			shellPath = /bin/sh;
 			shellScript = "cp ${BUILD_ROOT}/Debug-iphonesimulator/FeedHenry.framework/Headers/FeedHenry-Swift.h ${SRCROOT}/FeedHenry/FeedHenry-Swift.h";
 		};
-		EF69C127F977187071DAAB75 /* Copy Pods Resources */ = {
+		EF69C127F977187071DAAB75 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedHenry/Pods-FeedHenry-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5A5508682DC17207EA91C02 /* Check Pods Manifest.lock */ = {
+		F5A5508682DC17207EA91C02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +678,7 @@
 		};
 		4878D5EF1B579965004518C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2DC7BF1EAECF488557B91F8 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 80C9929116C2E9D1F79702EF /* Pods-FeedHenry.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -693,7 +699,7 @@
 		};
 		4878D5F01B579965004518C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CCDEB4630586564531FFBB5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7CEAE1F920C5D32784FC2791 /* Pods-FeedHenry.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
