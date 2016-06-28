@@ -41,7 +41,7 @@ public class CloudRequest: Request {
         let host = props.cloudHost
         var headers: [String: String]?
         if let sessionToken = dataManager.stringForKey("sessionToken") {
-            headers = ["x-fh-session":sessionToken]
+            headers = ["x-fh-sessionToken":sessionToken]
         }
         request(method, host: host, path: path, args: args, headers: headers, completionHandler: completionHandler)
     }
