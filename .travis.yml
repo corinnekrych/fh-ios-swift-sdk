@@ -10,8 +10,3 @@ before_install:
 notifications:
   irc: "irc.freenode.org#feedhenry"
 
-branches:
-  only:
-    - master
-
-
